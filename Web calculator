@@ -1,0 +1,717 @@
+CSC 310 Group 6 Assignment
+
+
+index.html: the HTML describing the calculator page.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <!-- The side navigation -->
+    <aside>
+      <div class="sidebar">
+        <h3>CSC 310 Group 6</h3>
+        <ul>
+            <li><a href="bio-data.html">Bio Data</a></li>
+            <li><a href="index.html">Calculator</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- The calculator -->
+      <div class="calculator">
+        <!-- The calculator screen -->
+        <div class="screen">
+          <div class="screen-last" id="lastOperationScreen"></div>
+          <div class="screen-current" id="currentOperationScreen">0</div>
+        </div>
+        <!-- The calculator buttons -->
+        <div class="buttons-grid">
+          <button class="btn btn-red span-2" id="clearBtn">CLEAR</button>
+          <button class="btn btn-blue span-2" id="deleteBtn">DELETE</button>
+          
+          <!-- The data-number and data-operator attributes are used in the js script
+          to find all the calculator buttons and operators easily-->
+
+          <button class="btn" data-number>7</button>
+          <button class="btn" data-number>8</button>
+          <button class="btn" data-number>9</button>
+          <button class="btn" data-operator>÷</button>
+
+          <button class="btn" data-number>4</button>
+          <button class="btn" data-number>5</button>
+          <button class="btn" data-number>6</button>
+          <button class="btn" data-operator>×</button>
+
+          <button class="btn" data-number>1</button>
+          <button class="btn" data-number>2</button>
+          <button class="btn" data-number>3</button>
+          <button class="btn" data-operator>−</button>
+
+          <button class="btn" id="pointBtn">.</button>
+          <button class="btn" data-number>0</button>
+          <button class="btn" id="equalsBtn">=</button>
+          <button class="btn" data-operator>+</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+bio-data.html: the HTMl describing the bio data page
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <!-- The side navigation -->
+    <aside>
+      <div class="sidebar">
+        <h3>CSC 310 Group 6</h3>
+        <ul>
+            <li><a href="bio-data.html">Bio Data</a></li>
+            <li><a href="index.html">Calculator</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- All the bio data of each individual user are placed in
+    forms because of the vagueness of the question. -->
+    <div class="bio-data-container">
+        <h2>Bio Data</h2>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Demilade Sonuga">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CG028141">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="Computer Science">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Omoniyi Tolulope">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CG028128">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="Computer Science">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Godwin Christian">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CG028084">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="Computer Science">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Badru Oluwabukunmi">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CG028054">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="Computer Science">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Dalang Kwatpan">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CG028062">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="Computer Science">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Taiwo Oluferanmi">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CH028190">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="MIS">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="Chukwu David">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="20CH028190">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="MIS">
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="bio-data">
+                <h3>New Data</h3>
+                <div class="bio-data-section">
+                    <p>Name</p>
+                    <input type="text" value="">
+                </div>
+                <div class="bio-data-section">
+                    <p>Matric No</p>
+                    <input type="text" value="">
+                </div>
+                <div class="bio-data-section">
+                    <p>Program</p>
+                    <input type="text" value="">
+                </div>
+                <button class="btn btn-blue" role="submit">Add</button>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
+
+styles.css: the styling for the HTML pages
+
+@font-face {
+  font-family: fira-code;
+  src: url(FiraCode-VariableFont_wght.ttf);
+}
+
+:root {
+  --background: #f6f6f6;
+  --font: #222;
+  --border: #333;
+  --screen: #eee;
+  --calculator: #aaa;
+  --btn: #eee;
+  --btn-hover: #ddd;
+  --btn-active: #ccc;
+  --btn-red: #faa;
+  --btn-red-hover: #e99;
+  --btn-red-active: #d88;
+  --btn-blue: #aaf;
+  --btn-blue-hover: #99e;
+  --btn-blue-active: #88d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--font);
+  font-family: fira-code;
+  line-height: 1.6;
+  /* Split the body into 2 columns, 1 for the side bar, one for the
+  calculator or biodata */
+  display: grid;
+  grid-template-columns: 300px auto;
+  /* Don't show the parts of the body that extend the screen height */
+  overflow-y: hidden;
+}
+
+/* Styling for the calculator buttons */
+button {
+  /* Removing the default borders from the calculator buttons */
+  border: none;
+  outline: none;
+  /* The color, font family and font size should be determined from the parent */
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  /* The cursor should appear as a pointer when a button is hovered over */
+  cursor: pointer;
+}
+
+/* Styling for the container holding the calculator */
+.main {
+  /* Centering the calculator */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* The height of the container should take up 3/4 of the screen height */
+  height: 75vh;
+  /* Space to keep the calculator from touching the borders of the screen */
+  padding: 10px;
+  margin-top: 50px;
+}
+
+/* Styling for the calculator */
+.calculator {
+  /* Setting the calculator's width */
+  width: 400px;
+  /* Styling the calculator's border */
+  border: 2px var(--border) solid;
+  border-radius: 15px;
+  /* Space between the calculator's edges */
+  padding: 20px;
+  background-color: var(--calculator);
+  margin-top: 50px;
+}
+
+/* Styling for the calculator's screen */
+.screen {
+  /* Space on screen */
+  padding: 10px 20px;
+  /* Giving the screen a solid black border */
+  border: 2px var(--border) solid;
+  /* Curving the screen's border corners */
+  border-radius: 5px;
+  /* Space between the screen and the calculator buttons */
+  margin-bottom: 20px;
+  /* Coloring the screen */
+  background-color: var(--screen);
+  /* Shifting text in the screen to the right */
+  text-align: right;
+  /* When the number becomes too long, break in on separate lines */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Styling for the upper part of the screen */
+.screen-last {
+  min-height: 32px;
+  font-size: 20px;
+}
+
+/* Styling for the lower part of the screen */
+.screen-current {
+  min-height: 64px;
+  font-size: 40px;
+}
+
+/* Styling for the arrangement of the calculator buttons */
+.buttons-grid {
+  display: grid;
+  /* Four columns to contain four normal sized buttons */
+  grid-template-columns: repeat(4, 1fr);
+  /* Space between the buttons on the calculator */
+  grid-gap: 10px;
+}
+
+/* Styling for the double width buttons: clear and delete */
+.span-2 {
+  grid-column: span 2;
+}
+
+/* Styling for all the buttons */
+.btn {
+  /* Space between the number in the button and the button boundaries */
+  padding: 20px;
+  /* Giving the buttons a solid black boundary */
+  border: 2px var(--border) solid;
+  /* Curving the buttons corner edges */
+  border-radius: 5px;
+  /* Giving the buttons a light gray background */
+  background-color: var(--btn);
+  font-size: 20px;
+}
+
+/* Styling for making the button color darker when hovered over */
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Styling for making the button color darker when clicking */
+.btn:active {
+  background-color: var(--btn-active);
+}
+
+/* Styling for the red button, clear */
+.btn-red {
+  background-color: var(--btn-red);
+}
+
+/* Styling to make the red button appear a darker red when hovered over*/
+.btn-red:hover {
+  background-color: var(--btn-red-hover);
+}
+
+
+/* Styling to make the red button darker when clicking over*/
+.btn-red:active {
+  background-color: var(--btn-red-active);
+}
+
+/* Styling for the blue button, delete and add new bio data */
+.btn-blue {
+  background-color: var(--btn-blue);
+}
+
+/* Styling to make the blue button appear a darker red when hovered over*/
+.btn-blue:hover {
+  background-color: var(--btn-blue-hover);
+}
+
+/* Styling to make the blue button darker when clicking over*/
+.btn-blue:active {
+  background-color: var(--btn-blue-active);
+}
+
+/* Styling for the sidebar */
+.sidebar {
+  /* Making it as fit the screen height */
+  height: 100vh;
+  display: flex;
+  /* Centering the items in the sidebar */
+  justify-content: center;
+  align-items: center;
+  /* Making the items orient from top to bottom rather than left to right */
+  flex-direction: column;
+  /* Making it a light shade of gray */
+  background-color: #eee
+}
+
+
+/* Styling for the heading in the navigation sidebar */
+.sidebar > h3 {
+  /* Putting space between the heading in the sidebar and the links */
+  margin-bottom: 10px;
+}
+
+/* Styling for the list of links in the sidebar */
+.sidebar > ul {
+  /* Removing the dots in front of the list items */
+  list-style-type: none;
+  /* Giving the link font a bigger size */
+  font-size: 1.1em;
+  /* Making the link text bold */
+  font-weight: 700;
+}
+
+/* Giving the links in the sidebar a blue color */
+a {
+  color: blue;
+}
+
+/* Styling for the container holding the bio data */
+.bio-data-container {
+  display: flex;
+  /* Displaying items in a vertical order instead of horizontal */
+  flex-direction: column;
+  /* Centering the form */
+  align-items: center;
+  /* Space between the form and the bottom of the screen */
+  padding-bottom: 100px;
+  /* Fixing the height to make it equal to the screen height */
+  height: 100vh;
+  /* Making the container scoll */
+  overflow-y: scroll;
+}
+
+/* Giving the bio data heading space between the screen top and the form */
+.bio-data-container > h2 {
+  margin: 30px 0;
+}
+
+/* Styling for bio data of each person */
+.bio-data {
+  /* Giving the bio data for a single person a card-like border */
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--calculator);
+  border-radius: 5px;
+  /* Space in the card */
+  padding: 50px;
+  width: 500px;
+  /* Space between one info in the card and the next */
+  margin-bottom: 20px;
+}
+
+/* Space between one card and the next */
+div.bio-data > div {
+  margin-bottom: 10px;
+}
+
+/* Centering the header for the new bio data form */
+div.bio-data > h3 {
+  text-align: center;
+}
+
+/* Reducing the size of the add button for the new bio data form */
+div.bio-data > .btn {
+  padding: 10px 15px;
+}
+
+/* Styling the content inside the bio data cards */
+.bio-data-section {
+  display: flex;
+  /* Spacing between a bio data name like "name" and the value for a person */
+  justify-content: space-between;
+  /* Increasing the font size of the bio data content */
+  font-size: 1.2em;
+}
+
+/* Making the bio data name like "matric no" bold */
+.bio-data-section > p {
+  font-weight: 500;
+}
+
+/* Styling the bio data values */
+.bio-data-section input {
+  /* Removing the default borders from the input */
+  border: none;
+  /* Using the parent's font family */
+  font-family: inherit;
+  /* Making the font size bigger */
+  font-size: 1em;
+  /* Giving it a dashed underline */
+  border-bottom: 1px dashed #808080;
+}
+
+script.js: the script giving the calculator functionality.
+
+// The first value to use in the current arithmetic operation
+let firstOperand = ''
+// The second value to use in the current arithmetic operation
+let secondOperand = ''
+// The current arithmetic operation being performed on the operands
+let currentOperation = null
+// Tells whether or not the screen should be reset
+let shouldResetScreen = false
+
+// A collection of all the number buttons on the calculator
+const numberButtons = document.querySelectorAll('[data-number]')
+// A collection of all the operator buttons on the calculator
+const operatorButtons = document.querySelectorAll('[data-operator]')
+// The equals to button
+const equalsButton = document.getElementById('equalsBtn')
+// The button for clearing the screen
+const clearButton = document.getElementById('clearBtn')
+// The button for backspacing
+const deleteButton = document.getElementById('deleteBtn')
+// The button for adding decimal points
+const pointButton = document.getElementById('pointBtn')
+// The area used to display the last arithmetic operation computed
+const lastOperationScreen = document.getElementById('lastOperationScreen')
+// The area used to display what is currently being inputted
+const currentOperationScreen = document.getElementById('currentOperationScreen')
+
+// Listening for keyboard input
+window.addEventListener('keydown', handleKeyboardInput)
+// Listening for events from the special function buttons
+// =, clear, delete and point
+equalsButton.addEventListener('click', evaluate)
+clearButton.addEventListener('click', clear)
+deleteButton.addEventListener('click', deleteNumber)
+pointButton.addEventListener('click', appendPoint)
+
+// Listen for events on all number buttons
+numberButtons.forEach((button) =>
+  button.addEventListener('click', () => appendNumber(button.textContent))
+)
+
+// Listen for events on all operator buttons
+operatorButtons.forEach((button) =>
+  button.addEventListener('click', () => setOperation(button.textContent))
+)
+
+// Adds a number to the screen
+function appendNumber(number) {
+  if (currentOperationScreen.textContent === '0' || shouldResetScreen)
+    resetScreen()
+  currentOperationScreen.textContent += number
+}
+
+// Removes all numbers from the calculator screen
+function resetScreen() {
+  currentOperationScreen.textContent = ''
+  shouldResetScreen = false
+}
+
+// Resets the screen and clears any current arithmetic operations
+function clear() {
+  currentOperationScreen.textContent = '0'
+  lastOperationScreen.textContent = ''
+  firstOperand = ''
+  secondOperand = ''
+  currentOperation = null
+}
+
+// Puts a decimal point on the screen
+function appendPoint() {
+  if (shouldResetScreen) resetScreen()
+  // Nothing on screen is assumed to be 0
+  if (currentOperationScreen.textContent === '')
+    currentOperationScreen.textContent = '0'
+  // Can't have more than 1 decimal point in a single number
+  if (currentOperationScreen.textContent.includes('.')) return
+  currentOperationScreen.textContent += '.'
+}
+
+// Backspaces a number
+function deleteNumber() {
+  currentOperationScreen.textContent = currentOperationScreen.textContent
+    .toString()
+    .slice(0, -1)
+}
+
+// Sets the current arithmetic operation
+function setOperation(operator) {
+  // Any arithmetic operation already typed should be evaluated
+  // For example, after typing 2 + 3 if the user types another '+',
+  // the 2 + 3 must be evaluated first and the firstOperand set to the resulting 5
+  // so it can become the first operand in the next evaluation
+  if (currentOperation !== null) evaluate()
+  firstOperand = currentOperationScreen.textContent
+  currentOperation = operator
+  lastOperationScreen.textContent = `${firstOperand} ${currentOperation}`
+  // The screen should be reset right before the second operand is
+  // to be typed
+  shouldResetScreen = true
+}
+
+// Computes the value of the current arithmetic expression and displays it
+// on screen
+function evaluate() {
+  if (currentOperation === null || shouldResetScreen) return
+  if (currentOperation === '÷' && currentOperationScreen.textContent === '0') {
+    alert("You can't divide by 0!")
+    return
+  }
+  secondOperand = currentOperationScreen.textContent
+  // Computing and displaying the result on screen
+  currentOperationScreen.textContent = roundResult(operate(currentOperation, firstOperand, secondOperand))
+  lastOperationScreen.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`
+  // Resetting the current operation
+  currentOperation = null
+}
+
+// Rounding the number `number` to 3 decimal places
+function roundResult(number) {
+  return Math.round(number * 1000) / 1000
+}
+
+// Determines what should be done when the keyboard is pressed
+function handleKeyboardInput(e) {
+  // If the key pressed is a number in the range [0, 9],
+  // put it on screen
+  if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
+  // Put a point on screen if the dot key was pressed
+  if (e.key === '.') appendPoint()
+  // Evaluate the result if enter or equals to was pressed
+  if (e.key === '=' || e.key === 'Enter') evaluate()
+  // Remove a number from screen if backspace was pressed
+  if (e.key === 'Backspace') deleteNumber()
+  // Clear the screen if the escape key was pressed
+  if (e.key === 'Escape') clear()
+  // If an arithmetic operator was pressed, format it and put it on screen
+  if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+    setOperation(convertOperator(e.key))
+}
+
+// Used to determine what to display on screen when an
+// arithmetic operator on the keyboard is pressed
+function convertOperator(keyboardOperator) {
+  if (keyboardOperator === '/') return '÷'
+  if (keyboardOperator === '*') return '×'
+  if (keyboardOperator === '-') return '−'
+  if (keyboardOperator === '+') return '+'
+}
+
+function add(a, b) {
+  return a + b
+}
+
+function subtract(a, b) {
+  return a - b
+}
+
+function multiply(a, b) {
+  return a * b
+}
+
+function divide(a, b) {
+  return a / b
+}
+
+// Used to determine which arithmetic operation to perform
+// given the arithmetic symbol `operator`
+function operate(operator, a, b) {
+  a = Number(a)
+  b = Number(b)
+  switch (operator) {
+    case '+':
+      return add(a, b)
+    case '−':
+      return subtract(a, b)
+    case '×':
+      return multiply(a, b)
+    case '÷':
+      if (b === 0) return null
+      else return divide(a, b)
+    default:
+      return null
+  }
+}
+
